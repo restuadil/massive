@@ -23,7 +23,8 @@ const Home = () => {
             <Navbar />
             <Hero />
             <Layanan />
-            <div className="bg-[url(img/bg.png)] bg-center bg-cover bg-no-repeat h-[400px]">
+            <div className="bg-center bg-cover bg-no-repeat h-[400px]"  
+style={{ backgroundImage: `url("img/bg.png")`}}>
                 <h1 className="text-center font-bold font-poppins text-3xl pt-20">Our numbers tell more about us</h1>
                 <div className="relative flex flex-col items-center justify-center gap-4 mt-4 md:hidden">
                     {data > 0 ?
