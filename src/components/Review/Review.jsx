@@ -18,10 +18,10 @@ const Review = () => {
                         <p className="font-montserrat ">{dataReview[currentData].review}</p>
                     </div>
                     <div className="flex justify-center mt-6 gap-2 md:hidden">
-                        {dataReview.map((item, index) => (
+                        {dataReview.slice(0, 5).map((item, index) => (
                             <button
                                 key={index}
-                                className={`p-3 rounded-full ${index === currentData ? 'bg-slate-700' : 'bg-slate-300 '}`}
+                                className={`p-3 rounded-full active:scale-110 ${index === currentData ? 'bg-slate-700' : 'bg-slate-300 '}`}
                                 onClick={() => setCurrentData(index)}
                             ></button>
                         ))}
