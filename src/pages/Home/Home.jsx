@@ -7,6 +7,8 @@ import { useState } from "react"
 import Review from "../../components/Review/Review"
 import { nanoid } from "nanoid"
 import Gallery from "../../components/Gallerry/Gallery"
+import Request from "../../components/Request/Request"
+import Footer from "../../components/Footer/Footer"
 
 
 const Home = () => {
@@ -60,6 +62,10 @@ const Home = () => {
             <div style={{ backgroundImage: `url("img/bg.png")` }} className="bg-center bg-cover bg-no-repeat">
                 <Gallery />
             </div>
+            <div style={{ backgroundImage: `url("img/bg2.png")` }} className="bg-center bg-cover bg-no-repeat ">
+                <Request />
+            </div>
+            <Footer />
         </>
     )
 }
