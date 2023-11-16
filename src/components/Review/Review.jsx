@@ -3,12 +3,12 @@ import { dataReview } from "../../Utils/dataReview";
 import RatingStars from "../UI/Star";
 import { nanoid } from "nanoid";
 
-const Review = () => {
+const Review = ({ bg }) => {
     const [currentData, setCurrentData] = useState(0);
 
     return (
         <>
-            <div className="my-10">
+            <div className="my-10 py-10 bg-center bg-cover bg-no-repeat" style={{ backgroundImage: `url(${bg})` }}>
                 <div className="flex flex-col">
                     <h1 className="text-center font-bold font-poppins text-3xl">Review on Yelp 🥀</h1>
                     <div className="mx-10 text-center flex flex-col gap-2 max-h-[350px] md:hidden">

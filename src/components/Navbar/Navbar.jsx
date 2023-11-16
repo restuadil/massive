@@ -17,7 +17,7 @@ const Navbar = () => {
                             </li>
                         </ul>
                         <div className="text-black text-3xl md:hidden">
-                            <RxHamburgerMenu className="h-[77px] "/>
+                            <RxHamburgerMenu className="h-[77px] " />
                         </div>
                     </div>
                 </div>

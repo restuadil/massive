@@ -24,7 +24,10 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <Hero />
+            <Hero btnContent={"Dapatkan Aplikasi"} img={"img/hero.jpeg"} >
+                <h2 className="text-white text-4xl font-medium font-chewy mt-20 md:mt-0 md:text-4xl md:tracking-widest">Lakukan yang <span className="text-red">TERBAIK</span> Untuk Hewan Peliharaan Anda</h2>
+                <p className="text-white font-poppins font-light text-xs tracking-wide md:mb-4"> Memberikan keahlian perawatan hewan peliharaan di Allston, Brighton, Brookline, Chestnut Hill, Fenway, Kenmore, Newton Corner, MA</p>
+            </Hero>
             <Layanan />
             <div className="bg-center bg-cover bg-no-repeat h-[400px]"
                 style={{ backgroundImage: `url("img/bg.png")` }}>
@@ -59,9 +62,7 @@ const Home = () => {
                 </div>
             </div>
             <Review />
-            <div style={{ backgroundImage: `url("img/bg.png")` }} className="bg-center bg-cover bg-no-repeat">
-                <Gallery />
-            </div>
+            <Gallery bg={"img/bg.png"} />
             <div style={{ backgroundImage: `url("img/bg2.png")` }} className="bg-center bg-cover bg-no-repeat ">
                 <Request />
             </div>

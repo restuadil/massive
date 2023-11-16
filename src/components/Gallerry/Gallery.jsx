@@ -1,9 +1,9 @@
 import { HiArrowNarrowRight } from "react-icons/hi"
 
-const Gallery = () => {
+const Gallery = ({ bg }) => {
     return (
         <>
-            <div className="py-10">
+            <div className="py-10 bg-center bg-cover bg-no-repeat" style={{ backgroundImage: `url(${bg})` }}>
                 <div className="relative ">
                     <h1 className="text-3xl text-center font-poppins font-bold  px-2 ">
                         Lihat Moment <span className="text-red">Bahagia</span> Kami
@@ -13,7 +13,7 @@ const Gallery = () => {
                         <HiArrowNarrowRight />
                     </button>
                 </div>
-                <button className="text-3xl font-chewy bg-white block mx-auto px-7 py-1 rounded-2xl mt-7 ">Lihat Galeri</button>
+                <button className="text-3xl font-chewy bg-white block mx-auto px-7 py-1 rounded-2xl mt-7 border-2">Lihat Galeri</button>
             </div>
         </>
     )
