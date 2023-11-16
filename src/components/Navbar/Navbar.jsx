@@ -1,4 +1,5 @@
 import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from "react-router-dom";
 const Navbar = () => {
     return (
         <>
@@ -9,7 +10,9 @@ const Navbar = () => {
                     </div>
                     <div>
                         <ul className="hidden md:flex font-medium font-poppins items-center gap-10 text-lg">
-                            <li>Tentang Kami</li>
+                            <Link to={"/aboutus"}>
+                                <li>Tentang Kami</li>
+                            </Link>
                             <li>Pelayanan Kami</li>
                             <li>Peliharaan</li>
                             <li>
