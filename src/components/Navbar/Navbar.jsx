@@ -9,7 +9,7 @@ const Navbar = () => {
                         <img src="img/logo.png" alt="" className="h-[77px] md:h-[125px]" />
                     </div>
                     <div>
-                        <ul className="hidden md:flex font-medium font-poppins items-center gap-10 text-lg">
+                        <ul className="hidden md:flex font-medium font-poppins items-center gap-10 text-lg cursor-pointer">
                             <Link to={"/aboutus"}>
                                 <li>Tentang Kami</li>
                             </Link>

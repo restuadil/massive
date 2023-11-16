@@ -25,7 +25,7 @@ const Footer = () => {
                     <div className="flec flex-col text-center my-3">
                         <img src="img/logo.png" alt="logo" className="block mx-auto" />
                         <div className="flex flex-row text-5xl justify-center gap-3">
-                            <FaFacebookF className="p-2 text-white  bg-black rounded-full" />
+                            <FaFacebookF className="p-2 text-white bg-black rounded-full" />
                             <AiFillInstagram className="p-2 text-white bg-black rounded-full" />
                         </div>
                     </div>

@@ -62,7 +62,7 @@ const Home = () => {
                 </div>
             </div>
             <Review />
-            <Gallery bg={"img/bg.png"} />
+                <Gallery bg={"img/bg.png"} />
             <div style={{ backgroundImage: `url("img/bg2.png")` }} className="bg-center bg-cover bg-no-repeat ">
                 <Request />
             </div>
