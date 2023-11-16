@@ -4,11 +4,11 @@ const Hero = ({ img, bg = "img/bg2.png", btnContent = "Dapatkan Aplikasi", child
   return (
     <>
       <div
-        className="relative h-[90vh] md:h-[431px] bg-center bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${bg})` }}
+        className="relative h-[90vh] md:h-[431px] bg-center bg-cover bg-no-repeat md:flex md:flex-row-reverse items-center"
       >
-        <img src={`${img}`} alt="" className="rounded-b-[300px] " />
-        <div className="mx-5 flex flex-col gap-5 md:pt-0 md:absolute md:inset-y-0 md:left-0 md:w-1/2 md:justify-center md:items-center md:p-10 md:mx-0">
+        <img src={`${img}`} alt="" className="rounded-b-[300px] md:rounded-none md:w-1/2 md:h-full " />
+        <div className="mx-5 flex flex-col gap-5 md:pt-0  md:p-10 md:mx-0">
           {children}
           <BtnHero btnContent={btnContent} />
         </div>

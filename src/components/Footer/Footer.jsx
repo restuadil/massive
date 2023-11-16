@@ -5,10 +5,10 @@ const Footer = () => {
     return (
         <>
             <div className="bg-center bg-cover bg-no-repeat py-10" style={{ backgroundImage: `url("img/bg.png")` }}>
-                <div className="flex flex-col">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between md:mx-3">
                     <div className="flec flex-col text-center my-3">
                         <span className="text-red  font-chewy text-3xl">Working Hours</span>
-                        <ul className="list-disc list-inside font-montserrat mt-2">
+                        <ul className="list-disc list-inside font-montserrat mt-2 md:list-none">
                             <li >Monday - Sunday: 10 am - 9 pm</li>
                             <li >All holidays & school vacations</li>
                         </ul>

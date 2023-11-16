@@ -7,6 +7,7 @@ import Gallery from "../../components/Gallerry/Gallery"
 import Hero from "../../components/Hero/Hero"
 import Navbar from "../../components/Navbar/Navbar"
 import Review from "../../components/Review/Review"
+import Request from "../../components/Request/Request";
 
 const AboutUs = () => {
     return (
@@ -61,7 +62,11 @@ const AboutUs = () => {
                     <li>Jika rumah Anda memiliki kode akses, kode tersebut hanya akan tersedia bagi pengasuh Anda selama jam layanan terjadwal`</li>
                 </ul>
             </div>
+            <img src="img/hero.jpeg" className="h-[500px] block mx-auto p-10" alt="" />
             <Review bg={"img/bg.png"} />
+            <div style={{ backgroundImage: `url("img/bg2.png")` }} className="bg-center bg-cover bg-no-repeat ">
+                <Request />
+            </div>
             <Gallery />
             <Footer />
         </>
