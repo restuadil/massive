@@ -2,7 +2,7 @@
 const Request = () => {
     return (
         <>
-            <div className="flex  items-center py-10">
+            <div className="flex items-center py-10 md:justify-center">
                 {/* <img src="img/imagebg2.png" alt="" className="w-1/2 " /> */}
                 <div>
                     <h1 className="text-justify font-poppins font-bold text-2xl text-white">Siap menggunakan layanan kami?</h1>
