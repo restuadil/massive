@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { HiArrowNarrowRight } from "react-icons/hi"
 
 const Gallery = ({ bg }) => {

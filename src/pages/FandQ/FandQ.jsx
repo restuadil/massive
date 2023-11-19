@@ -4,7 +4,9 @@ import Navbar from "../../components/Navbar/Navbar"
 import { dataQuestions } from "../../Utils/dataQuestions"
 import { useState } from "react"
 import { nanoid } from "nanoid"
-dataQuestions
+
+
+// !! next looping data questions and router to detail questions
 const FandQ = () => {
     const [openAnswerId, setOpenAnswerId] = useState(null);
 

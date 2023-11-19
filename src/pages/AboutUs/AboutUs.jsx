@@ -23,13 +23,14 @@ const AboutUs = () => {
                 <img src="img/hero.jpeg" className="h-[500px] md:w-1/2  block mx-auto p-10" alt="" />
                 <div>
                     <h1 className="font-poppins font-bold text-2xl text-center">Kami Menyediakan Layanan Perawatan Hewan Peliharaan Selama <span className="text-red">Bertahun-Tahun</span></h1>
-                    <p className="font-montserrat mt-5 text-justify">“Di Pet Care, tujuan kami adalah membuat perawatan hewan peliharaan menjadi lebih mudah, dengan memberikan layanan yang fleksibel dan dapat diandalkan, sehingga pemilik hewan peliharaan dapat menjalankan bisnisnya, dan tidak perlu khawatir hewan peliharaannya menunggu di rumah. "</p>
+                    <p className="font-montserrat mt-5 text-justify">“Di Pet Care, tujuan kami adalah membuat perawatan hewan peliharaan menjadi lebih mudah, dengan memberikan layanan yang fleksibel dan dapat diandalkan, sehingga pemilik hewan peliharaan dapat menjalankan bisnisnya, dan tidak perlu khawatir hewan peliharaannya menunggu di rumah. </p>
                     <span className="font-montserrat font-bold mt-8 block">Founder, Pet Care</span>
                     <span className="font-montserrat font-bold">Bobby</span>
                 </div>
             </div>
+
             <div className="bg-cover bg-no-repeat px-5 py-10 " style={{ backgroundImage: `url("img/bg.png")` }}>
-                <h1 className=" font-poppins font-bold text-2xl md:text-center md:py-1">Hewa Peliharaan Anda <span className="text-red">Aman</span> Bersama Kami</h1>
+                <h1 className=" font-poppins font-bold text-2xl md:text-center md:py-1">Hewan Peliharaan Anda <span className="text-red">Aman</span> Bersama Kami</h1>
                 <div className="flex flex-col gap-5 mt-5 md:flex md:flex-row md:items-center">
                     <div className="flex flex-col gap-3">
                         <FaMedal className="text-red text-3xl" />
@@ -53,6 +54,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
+
             <div className="md:flex md:flex-row-reverse md:items-center">
                 <div>
                     <h1 className=" font-poppins font-bold text-2xl text-center mt-3">Rumah Anda <span className="text-red">Terlindungi</span></h1>

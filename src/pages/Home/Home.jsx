@@ -38,10 +38,10 @@ const Home = () => {
                             <GrFormPrevious />
                         </button> : ""
                     }
-                    <span className="bg-white text-center font-bold font-poppins text-5xl text-red px-5 py-7 rounded-full ">{dataAbout[data].title}</span>
+                    <span className="bg-white text-center flex items-center justify-center font-bold font-poppins text-5xl text-red paint w-[130px] h-[130px] ">{dataAbout[data].title}</span>
                     {
                         data < dataAbout.length - 1 ?
-                            <button className="absolute right-10 top-6  p-3 rounded-full shadow-slate-500 shadow-2xl text-3xl"
+                            <button className="absolute right-10 top-6  p-5 rounded-full shadow-slate-500 shadow-2xl text-3xl"
                                 onClick={handleNext}>
                                 <GrFormNext />
                             </button> : ""
@@ -62,10 +62,8 @@ const Home = () => {
                 </div>
             </div>
             <Review />
-                <Gallery bg={"img/bg.png"} />
-            <div style={{ backgroundImage: `url("img/bg2.png")` }} className="bg-center bg-cover bg-no-repeat ">
-                <Request />
-            </div>
+            <Gallery bg={"img/bg.png"} />
+            <Request bg={"img/bg2.png"} />
             <Footer />
         </>
     )

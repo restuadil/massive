@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { dataReview } from "../../Utils/dataReview";
 import RatingStars from "../UI/Star";

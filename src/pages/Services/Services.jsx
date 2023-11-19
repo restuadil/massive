@@ -3,6 +3,7 @@ import Footer from "../../components/Footer/Footer"
 import Hero from "../../components/Hero/Hero"
 import Navbar from "../../components/Navbar/Navbar"
 import Request from "../../components/Request/Request"
+import Vaccine from "../../components/Vaccine/Vaccine";
 
 const Services = () => {
 
@@ -27,6 +28,7 @@ const Services = () => {
                     <p className="font-montserrat mx-5 text-justify">Vaksin harus diberikan pada hewan dalam keadaan: sehat, tidak demam, tidak diare, tidak flu, tidak ada masalah kulit, usia memenuhi syarat minimal, dan sudah obat cacing. Setelah pemberian vaksin dalam waktu satu minggu hewan tidak boleh mendapat perlakuan yang membuat hewan stress (grooming/perjalanan jauh) serta tidak boleh ke luar rumah terlebih dahulu yang berpotensi menghambat pertumbuhan antibodi tubuhnya dan masih bisa terpapar penyakit.</p>
                 </div>
             </div>
+            <Vaccine />
             <div style={{ backgroundImage: `url("img/bg2.png")` }} className="bg-center bg-cover bg-no-repeat ">
                 <Request />
             </div>
