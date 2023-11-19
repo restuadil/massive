@@ -1,21 +1,18 @@
-const Hero = () => {
+import BtnHero from "../UI/BtnHero";
+
+const Hero = ({ img, bg = "img/bg2.png", btnContent = "Dapatkan Aplikasi", children }) => {
   return (
     <>
       <div
-        className="relative h-[100vh] md:h-[431px] bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: `url("img/hero.png")` }}
+        style={{ backgroundImage: `url(${bg})` }}
+        className="relative h-[90vh] md:h-[431px] bg-center bg-cover bg-no-repeat md:flex md:flex-row-reverse items-center"
       >
-        <div className="pt-28 mx-5 flex flex-col gap-5 md:pt-0 md:absolute md:inset-y-0 md:left-0 md:w-1/2 md:justify-center md:items-center md:p-10 md:mx-0">
-          <h2 className="text-white text-3xl font-medium font-chewy mt-20 md:mt-0 md:text-4xl md:tracking-widest">Lakukan yang <span className="text-red">TERBAIK</span> Untuk Hewan Peliharaan Anda</h2>
-          <p className="text-white font-poppins font-light text-xs tracking-wide md:mb-4"> Memberikan keahlian perawatan hewan peliharaan di Allston, Brighton, Brookline, Chestnut Hill, Fenway, Kenmore, Newton Corner, MA</p>
-          <button className="text-white bg-red py-2 px-6 rounded-3xl shadow-md shadow-slate-500 w-56 md:-ml-32">
-            <div className="flex gap-2 items-center justify-center">
-              <img src="img/pow.png" alt="" />
-              <p>Dapatkan Aplikasi</p>
-            </div>
-          </button>
+        <img src={`${img}`} alt="" className="rounded-b-[300px] md:rounded-none md:w-1/2 md:h-full " />
+        <div className="mx-5 flex flex-col gap-5 md:pt-0  md:p-10 md:mx-0">
+          {children}
+          <BtnHero btnContent={btnContent} />
         </div>
-      </div>
+      </div >
     </>
   );
 };

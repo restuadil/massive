@@ -20,3 +20,4 @@ export const dataLayanan = [
         content: "Dokter Hewan Panggilan Ke Rumah Anda tanpa perlu ke luar rumah atau ke klinik hewan secara langsung untuk merawat hewan kesayangan anda."
     },
 ]
+

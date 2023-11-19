@@ -1,4 +1,5 @@
 import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from "react-router-dom";
 const Navbar = () => {
     return (
         <>
@@ -8,8 +9,10 @@ const Navbar = () => {
                         <img src="img/logo.png" alt="" className="h-[77px] md:h-[125px]" />
                     </div>
                     <div>
-                        <ul className="hidden md:flex font-medium font-poppins items-center gap-10 text-lg">
-                            <li>Tentang Kami</li>
+                        <ul className="hidden md:flex font-medium font-poppins items-center gap-10 text-lg cursor-pointer">
+                            <Link to={"/aboutus"}>
+                                <li>Tentang Kami</li>
+                            </Link>
                             <li>Pelayanan Kami</li>
                             <li>Peliharaan</li>
                             <li>
@@ -17,7 +20,7 @@ const Navbar = () => {
                             </li>
                         </ul>
                         <div className="text-black text-3xl md:hidden">
-                            <RxHamburgerMenu className="h-[77px] "/>
+                            <RxHamburgerMenu className="h-[77px] " />
                         </div>
                     </div>
                 </div>
