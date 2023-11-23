@@ -54,7 +54,6 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
-
             <div className="md:flex md:flex-row-reverse md:items-center">
                 <div>
                     <h1 className=" font-poppins font-bold text-2xl text-center mt-3">Rumah Anda <span className="text-red">Terlindungi</span></h1>
@@ -70,9 +69,7 @@ const AboutUs = () => {
                 <img src="img/hero.jpeg" className="h-[500px] block mx-auto p-10 md:w-1/2" alt="" />
             </div>
             <Review bg={"img/bg.png"} />
-            <div style={{ backgroundImage: `url("img/bg2.png")` }} className="bg-center bg-cover bg-no-repeat ">
-                <Request />
-            </div>
+            <Request bg={"img/bg2.png"} />
             <Gallery />
             <Footer />
         </>

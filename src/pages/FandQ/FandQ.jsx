@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar/Navbar"
 import { dataQuestions } from "../../Utils/dataQuestions"
 import { useState } from "react"
 import { nanoid } from "nanoid"
+import Footer from "../../components/Footer/Footer"
 
 
 // !! next looping data questions and router to detail questions
@@ -34,7 +35,7 @@ const FandQ = () => {
                 <div className="mx-3 mt-5">
                     <h2 className="font-chewy text-xl text-red">Info Perusahaan</h2>
                     <div className="border-y-4 border-gray-500">
-                        <div className="w-5/6 mx-auto flex flex-col justify-center text-center my-3">
+                        <div className="w-5/6 mx-auto flex flex-col mt-3 justify-center text-center my-3">
                             <h1 className="text-3xl font-bold mt-5 text-white mb-5">Tanya Jawab Umum</h1>
                             {dataQuestions.map((question) => (
                                 <ul key={nanoid()} onClick={() => toggleAnswer(question.id)}>
@@ -58,7 +59,44 @@ const FandQ = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="bg-center bg-cover bg-no-repeat" style={{ backgroundImage: `url("img/bg.png")` }}>
+                    <div className="mx-5 py-5">
+                        <h1 className="text-red font-chewy font-bold text-3xl text-center">Ada Pertanyaan Lainya?</h1>
+                        <form action="">
+                            <div className="flex flex-col mt-3">
+                                <label htmlFor="name" className="font-montserrat font-bold">Nama Kamu : <span className="text-red text-2xl">*</span>
+                                </label>
+                                <input type="text" name="name" id="" className=" shadow-slate-500 shadow-md py-1 rounded-md" />
+                            </div>
+                            <div className="flex flex-col mt-3">
+                                <label htmlFor="name" className="font-montserrat font-bold">Email : <span className="text-red text-2xl">*</span>
+                                </label>
+                                <input type="text" name="name" id="" className=" shadow-slate-500 shadow-md py-1 rounded-md" />
+                            </div>
+                            <div className="flex flex-col mt-3">
+                                <label htmlFor="name" className="font-montserrat font-bold">Phone : <span className="text-red text-2xl">*</span>
+                                </label>
+                                <input type="text" name="name" id="" className=" shadow-slate-500 shadow-md py-1 rounded-md" />
+                            </div>
+                            <div className="flex flex-col mt-3">
+                                <label htmlFor="name" className="font-montserrat font-bold">Jenis Hewan: <span className="text-red text-2xl">*</span>
+                                </label>
+                                <input type="text" name="name" id="" className=" shadow-slate-500 shadow-md py-1 rounded-md" />
+                            </div>
+                            <div className="flex flex-col mt-3">
+                                <label htmlFor="name" className="font-montserrat font-bold">Pertanyaan Kamu : <span className="text-red text-2xl">*</span>
+                                </label>
+                                <input type="text" name="name" id="" className=" shadow-slate-500 shadow-md py-3 rounded-md" />
+                            </div>
+                            <button className="mt-8 block mx-auto font-chewy font-bold text-3xl text-center rounded-3xl border-2 border-black py-2 px-8">
+                                Submit Pertanyaan
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
+            <Footer />
         </>
     )
 }

@@ -13,7 +13,9 @@ const Navbar = () => {
                             <Link to={"/aboutus"}>
                                 <li>Tentang Kami</li>
                             </Link>
-                            <li>Pelayanan Kami</li>
+                            <Link to={"/services"}>
+                                <li>Pelayanan Kami</li>
+                            </Link>
                             <li>Peliharaan</li>
                             <li>
                                 <button className="text-white bg-red py-2 px-6 rounded-3xl shadow-md shadow-slate-500">Masuk</button>
