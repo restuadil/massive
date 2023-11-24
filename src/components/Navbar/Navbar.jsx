@@ -1,25 +1,52 @@
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { nanoid } from "nanoid";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
+
 const Navbar = () => {
+    const location = useLocation();
+    const [activeUrl, setActiveUrl] = useState(location.pathname);
+
+    const navigation = [
+        {
+            url: "/aboutus",
+            title: "Tentang Kami"
+        },
+        {
+            url: "/services",
+            title: "Pelayanan Kami"
+        },
+        {
+            url: "/pet",
+            title: "Peliharaan"
+        }
+    ];
+
+    const handleClick = (url) => {
+        setActiveUrl(url);
+    };
+
     return (
         <>
             <div className="w-full fixed top-0 z-50 bg-white">
-                <div className="mx-5 flex items-center justify-between ">
+                <div className="mx-5 flex items-center justify-between">
                     <div>
                         <img src="img/logo.png" alt="" className="h-[77px] md:h-[125px]" />
                     </div>
                     <div>
                         <ul className="hidden md:flex font-medium font-poppins items-center gap-10 text-lg cursor-pointer">
-                            <Link to={"/aboutus"}>
-                                <li>Tentang Kami</li>
-                            </Link>
-                            <Link to={"/services"}>
-                                <li>Pelayanan Kami</li>
-                            </Link>
-                            <li>Peliharaan</li>
-                            <li>
-                                <button className="text-white bg-red py-2 px-6 rounded-3xl shadow-md shadow-slate-500">Masuk</button>
-                            </li>
+                            {navigation.map((item) => (
+                                <Link
+                                    to={item.url}
+                                    key={nanoid()}
+                                    onClick={() => handleClick(item.url)}
+                                >
+                                    <li style={{ color: activeUrl === item.url ? 'red' : 'black' }}>
+                                        {item.title}
+                                    </li>
+                                </Link>
+                            ))}
                         </ul>
                         <div className="text-black text-3xl md:hidden">
                             <RxHamburgerMenu className="h-[77px] " />
@@ -29,7 +56,7 @@ const Navbar = () => {
             </div>
             <div className="mb-[75px] md:mb-[120px]"></div>
         </>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
