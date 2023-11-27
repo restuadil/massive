@@ -1,4 +1,4 @@
-import CardQuestion from "../../components/CardQuestion/CardQuestion"
+import CardQuestion from "../../components/Card/CardQuestion/CardQuestion"
 import Footer from "../../components/Footer/Footer"
 import Hero from "../../components/Hero/Hero"
 import Navbar from "../../components/Navbar/Navbar"
