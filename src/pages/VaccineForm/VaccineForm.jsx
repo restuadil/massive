@@ -9,7 +9,7 @@ const VaccineForm = () => {
             <Navbar />
             <div className="my-5">
                 <h1 className="text-center font-bold text-3xl my-3">Form Vaksinasi Hewan</h1>
-                <div className="bg-[#FAF8F8] p-10 rounded-md mx-32 ">
+                <div className="bg-[#FAF8F8] p-10 rounded-md mx-52 ">
                     <div className=" mt-3">
                         <label htmlFor="name" className="font-bold font-poppins text-xl ">Nama Pemilik Hewan</label>
                         <input type="text" name="name" id="name" className="w-full rounded-md bg-slate-50 shadow-md shadow-slate-500 py-3 mt-3" />

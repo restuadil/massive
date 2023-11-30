@@ -12,7 +12,7 @@ const Consultation = () => {
             pet: "Kucing",
             star: 5,
             job: "3 Tahun",
-            price: 50.000,
+            price: "50.000  ",
             location: "Kediri, Jawa Timur",
             jadwal: ["Senin 10:00 - 13:00 WIB",
                 "Selasa 10:00 - 13:00 WIB",
@@ -27,7 +27,7 @@ const Consultation = () => {
             pet: "Kucing",
             star: 5,
             job: "3 Tahun",
-            price: 50.000,
+            price: "50.000  ",
             location: "Kediri, Jawa Timur",
             jadwal: ["Senin 10:00 - 13:00 WIB",
                 "Selasa 10:00 - 13:00 WIB",
@@ -42,7 +42,7 @@ const Consultation = () => {
             pet: "Kucing",
             star: 5,
             job: "3 Tahun",
-            price: 50.000,
+            price: "50.000  ",
             location: "Kediri, Jawa Timur",
             jadwal: ["Senin 10:00 - 13:00 WIB",
                 "Selasa 10:00 - 13:00 WIB",
@@ -57,7 +57,7 @@ const Consultation = () => {
             pet: "Kucing",
             star: 5,
             job: "3 Tahun",
-            price: 50.000,
+            price: "50.000  ",
             location: "Kediri, Jawa Timur",
             jadwal: ["Senin 10:00 - 13:00 WIB",
                 "Selasa 10:00 - 13:00 WIB",
@@ -72,7 +72,7 @@ const Consultation = () => {
             pet: "Kucing",
             star: 5,
             job: "3 Tahun",
-            price: 50.000,
+            price: "50.000  ",
             location: "Kediri, Jawa Timur",
             jadwal: ["Senin 10:00 - 13:00 WIB",
                 "Selasa 10:00 - 13:00 WIB",
@@ -88,7 +88,7 @@ const Consultation = () => {
                 <div className="bg-slate-100 py-3 flex flex-row gap-1 items-center px-10 rounded-md border-slate-300 border-2">
                     <label htmlFor="find"></label>
                     <CgSearch className="text-2xl" />
-                    <input type="text" name="find" id="find" placeholder="Cari dokter" className="p-1 bg-transparent" />
+                    <input type="text" name="find" id="find" placeholder="Cari dokter" className="px-5 bg-transparent" />
                 </div>
             </div>
             <div className="flex flex-col mx-10 gap-3">

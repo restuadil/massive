@@ -23,7 +23,7 @@ const Services = () => {
                     <div className="">
                         <p className="text-justify mx-5 font-montserrat">Vaksinasi hewan sangat penting karena dapat melindungi mereka dari penyakit yang berbahaya dan dapat menyebabkan penderitaan yang serius atau bahkan kematian. Vaksin bekerja dengan merangsang sistem kekebalan tubuh untuk memproduksi perlindungan terhadap patogen penyebab penyakit.</p>
                         <div className="flex items-center gap-1 py-2 bg-red w-3/4 mx-auto justify-center font-chewy text-2xl text-white px-2 rounded-md my-2">
-                            <Link to={"/vaccineform"}>
+                            <Link to={"/services/vaccineform"}>
                                 <button >Jadwalkan Vaksinasasi </button>
                             </Link>
                             <MdOutlineNavigateNext className="text-white" />

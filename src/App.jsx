@@ -18,7 +18,7 @@ export default function App() {
             <Route path="services" element={<Services />} />
             <Route path="fandq" element={<FandQ />} />
             <Route path="article" element={<Article />} />
-            <Route path="vaccineform" element={<VaccineForm />} />
+            <Route path="services/vaccineform" element={<VaccineForm />} />
             <Route path="consultation" element={<Consultation />} />
         </Routes>
     )
