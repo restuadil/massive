@@ -4,8 +4,19 @@ import Navbar from "../../components/Navbar/Navbar"
 import Request from "../../components/Request/Request"
 import { doctor } from "../../Utils/dataDoctor";
 import { FcHome } from "react-icons/fc";
+import Payment from "../../components/Payment/Payment";
 
 const HomeVisit = () => {
+    const data = [
+        {
+            name: "Steril",
+            price: "Tidak Melayani",
+        },
+        {
+            name: "Flushing Urine",
+            price: "150.000"
+        }
+    ]
     return (
         <>
             <Navbar logo="../../img/logo.png" />
@@ -63,7 +74,7 @@ const HomeVisit = () => {
                     })
                 }
             </div>
-            <div className="mx-10 bg-slate-100 p-8 rounded-lg">
+            <div className="mx-36 bg-slate-100 p-8 rounded-lg">
                 <h1 className="text-2xl font-bold mb-4">Tarif Dasar Layanan Dokter Hewan ke Rumah</h1>
                 <table className="w-full border">
                     <tbody>
@@ -99,6 +110,27 @@ const HomeVisit = () => {
                     <p className="tracking-wider"><span className="font-bold text-2xl mr-1">*</span>Apabila klien melakukan pembatalan biaya ketika drh sudah berada di jalan, maka klien tetap harus membayar biaya pembatalan sebesar 50% dari estimasi harga awal.</p>
                 </div>
             </div>
+            <div className="mx-36 bg-slate-100 p-8 rounded-lg mt-10">
+                <h1 className="text-2xl font-bold mb-4">Tarif Tindakan Medis Dokter Hewan</h1>
+                <table className="w-full border">
+                    <tbody>
+                        {data.map((item) => {
+                            return (
+                                <tr key={nanoid()}>
+                                    <td className="border p-2">{item.name}</td>
+                                    <td className="border p-2">{item.price}</td>
+                                </tr>
+                            )
+                        })}
+                    </tbody>
+                </table>
+                <div className="mt-5">
+                    <p className="tracking-wider"><span className="font-bold text-2xl mr-1 ">*</span>Basic fee merupakan biaya visit dan medical check up</p>
+                    <br />
+                    <p className="tracking-wider"><span className="font-bold text-2xl mr-1">*</span>Apabila klien melakukan pembatalan biaya ketika drh sudah berada di jalan, maka klien tetap harus membayar biaya pembatalan sebesar 50% dari estimasi harga awal.</p>
+                </div>
+            </div>
+            <Payment />
 
             <Request bg={"../../img/bg2.png"} />
             <Footer logo="../../img/logo.png" bg={`url("../../img/bg.png")`} />
