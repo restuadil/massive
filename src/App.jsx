@@ -7,6 +7,7 @@ import FandQ from './pages/FandQ/FandQ';
 import Article from './pages/Article/Article';
 import VaccineForm from './pages/VaccineForm/VaccineForm';
 import Consultation from './pages/Consultation/Consultation';
+import HomeVisit from './pages/HomeVisit/HomeVisit';
 
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
             <Route path="fandq" element={<FandQ />} />
             <Route path="article" element={<Article />} />
             <Route path="services/vaccineform" element={<VaccineForm />} />
+            <Route path="services/homevisit" element={<HomeVisit />} />
             <Route path="consultation" element={<Consultation />} />
         </Routes>
     )

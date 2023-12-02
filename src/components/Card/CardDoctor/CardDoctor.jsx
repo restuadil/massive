@@ -14,9 +14,9 @@ const CardDoctor = ({ doctor }) => {
                             <div>
                                 <h1 className="font-bold font-poppins text-2xl">{item.name}</h1>
                                 <div className="flex flex-row gap-5">
-                                    <span>{item.pet}</span>
+                                    <span>{item.specialist}</span>
                                     <span>{item.star}</span>
-                                    <span>{item.job}</span>
+                                    <span>{item.exp}</span>
                                 </div>
                             </div>
                             <div className="flex flex-row-reverse gap-3">

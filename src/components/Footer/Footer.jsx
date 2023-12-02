@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { FaFacebookF } from "react-icons/fa"
 import { AiFillInstagram } from "react-icons/ai"
 
-const Footer = () => {
+const Footer = ({ bg = `url("img/bg.png")`, logo = "img/logo.png" }) => {
     return (
         <>
-            <div className="bg-center bg-cover bg-no-repeat py-10" style={{ backgroundImage: `url("img/bg.png")` }}>
+            <div className="bg-center bg-cover bg-no-repeat py-10" style={{ backgroundImage: bg }}>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between md:mx-3">
                     <div className="flec flex-col text-center my-3">
                         <span className="text-red  font-chewy text-3xl">Working Hours</span>
@@ -23,7 +24,7 @@ const Footer = () => {
                         <span className="font-montserrat font-bold text-2xl">617-608-3131</span>
                     </div>
                     <div className="flec flex-col text-center my-3">
-                        <img src="img/logo.png" alt="logo" className="block mx-auto" />
+                        <img src={logo} alt="logo" className="block mx-auto" />
                         <div className="flex flex-row text-5xl justify-center gap-3">
                             <FaFacebookF className="p-2 text-white bg-black rounded-full" />
                             <AiFillInstagram className="p-2 text-white bg-black rounded-full" />
