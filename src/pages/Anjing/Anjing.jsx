@@ -5,7 +5,14 @@ import Navbar from "../../components/Navbar/Navbar"
 import Request from "../../components/Request/Request"
 
 const Anjing = () => {
-    const cardCat = ["Hal yang perlu disiapkan untuk memelihara Anjing", "Mengenal jenis Anjing yang populer di indonesia", "pertimbangan untuk mengadopsi anak Anjing", "cara merawat Anjing", "bagaimana memahami perilaku anak Anjing", "hal yang  diperhatikan pada kesehatan Anjing"]
+    const Dog = [
+        { to: "persiapan", title: "Hal yang perlu disiapkan untuk memelihara Anjing" },
+        { to: "jenis", title: "Mengenal Ras Anjing" },
+        { to: "pertimbangan", title: "Pertimbangan untuk mengadopsi anak Anjing" },
+        { to: "perawatan", title: "Cara merawat Anjing" },
+        { to: "perilaku", title: "Bagaimana memahami perilaku anak Anjing" },
+        { to: "kesehatan", title: "Hal yang perlu diperhatikan pada kesehatan Anjing" },
+    ];
     return (
         <>
             <Navbar logo="../../img/logo.png" />
@@ -32,7 +39,7 @@ const Anjing = () => {
             </div>
             <div className="flex flex-row flex-wrap justify-center items-center mx-20 gap-5 my-5">
                 {
-                    cardCat.map((card) => {
+                    Dog.map((card) => {
                         return (
                             <CardPet card={card} key={nanoid()} />
                         )

@@ -20,6 +20,7 @@ import PerawatanAnjing from './pages/Anjing/Perawatan/PerawatanAnjing';
 import PersiapanAnjing from './pages/Anjing/Persiapan/PersiapanAnjing';
 import PertimbanganAnjing from './pages/Anjing/Pertimbangan/PertimbanganAnjing';
 import PerilakuAnjing from './pages/Anjing/Perilaku/PerilakuAnjing';
+import KesehatanAnjing from './pages/Anjing/Kesehatan/KesehatanAnjing';
 
 
 export default function App() {
@@ -46,6 +47,7 @@ export default function App() {
             <Route path="pet/dog/persiapan" element={<PersiapanAnjing />} />
             <Route path="pet/dog/pertimbangan" element={<PertimbanganAnjing />} />
             <Route path="pet/dog/perilaku" element={<PerilakuAnjing />} />
+            <Route path="pet/dog/kesehatan" element={<KesehatanAnjing />} />
         </Routes>
     )
 }
