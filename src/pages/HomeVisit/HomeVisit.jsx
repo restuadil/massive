@@ -7,16 +7,125 @@ import { FcHome } from "react-icons/fc";
 import Payment from "../../components/Payment/Payment";
 
 const HomeVisit = () => {
-    const data = [
-        {
-            name: "Steril",
-            price: "Tidak Melayani",
-        },
-        {
-            name: "Flushing Urine",
-            price: "150.000"
-        }
-    ]
+    const data =
+        [
+            {
+                name: "Steril",
+                price: "Tidak Melayani",
+            },
+            {
+                name: "Flushing Urine",
+                price: "150.000"
+            },
+            {
+                name: "Nebulizer",
+                price: "70.000",
+            },
+            {
+                name: "Pemasangan microchip",
+                price: "400.000",
+            },
+            {
+                name: "Othematoma / auric hematoma <1 kg, 60 menit",
+                price: "400.000",
+            },
+            {
+                name: "Othematoma / auric hematoma 1-5 kg, 60 menit",
+                price: "500.000",
+            },
+            {
+                name: "Othematoma / auric hematoma 5-10 kg, 60 menit",
+                price: "750.000",
+            },
+            {
+                name: "Othematoma / auric hematoma 10-20 kg, 60 menit",
+                price: "950.000",
+            },
+            {
+                name: "Othematoma / auric hematoma >20 kg, 60 menit",
+                price: "1.100.000",
+            },
+            {
+                name: "Othematoma / auric hematoma Exopet, 60 menit",
+                price: "750.000",
+            },
+            {
+                name: "Abdominocentesis <1 kg, 10 menit",
+                price: "100.000",
+            },
+            {
+                name: "Abdominocentesis 1-5 kg, 10 menit",
+                price: "150.000",
+            },
+            {
+                name: "Abdominocentesis 5-10 kg, 10 menit",
+                price: "200.000",
+            },
+            {
+                name: "Abdominocentesis 10-20 kg, 10 menit",
+                price: "300.000",
+            },
+            {
+                name: "Abdominocentesis >20 kg, 10 menit",
+                price: "450.000",
+            },
+            {
+                name: "Distokia (hewan kecil)",
+                price: "250.000",
+            },
+            {
+                name: "Test Kit",
+                price: "250.000",
+            },
+            {
+                name: "Cek darah rutin",
+                price: "300.000",
+            },
+            {
+                name: "Cek kimia darah",
+                price: "600.000",
+            },
+            {
+                name: "Cek feses",
+                price: "30.000",
+            },
+            {
+                name: "Pemasangan infus",
+                price: "150.000",
+            },
+            {
+                name: "Top up infus per botol",
+                price: "50.000",
+            },
+            {
+                name: "Observasi cairan infus selama 2 jam (beserta pelepasan)",
+                price: "200.000",
+            },
+            {
+                name: "Injeksi Antibiotik/Vitamin",
+                price: "50.000 – 80.000",
+            },
+            {
+                name: "Injeksi obat untuk kucing",
+                price: "Start from 10.000",
+            },
+            {
+                name: "Injeksi obat untuk anjing",
+                price: "Start from 25.000",
+            },
+            {
+                name: "Pemeriksaan Kebutuhan hewan ternak",
+                price: "30.000",
+            },
+            {
+                name: "Distokia (ternak) + treatment induk dan anak",
+                price: "120.000",
+            },
+            {
+                name: "Vaksin ternak (SE/Antrax/Bruceliosis",
+                price: "20.000",
+            },
+        ]
     return (
         <>
             <Navbar logo="../../img/logo.png" />
@@ -88,7 +197,7 @@ const HomeVisit = () => {
                         </tr>
                         <tr>
                             <td className="border p-2">Distance fee</td>
-                            <td className="border p-2">5 Km = Free >5 Km = Rp 10,000 / Km Batas maksimal = Rp.150,000</td>
+                            <td className="border p-2">5 Km = Free 5 Km = Rp 10,000 / Km Batas maksimal = Rp.150,000</td>
                         </tr>
                         <tr>
                             <td className="border p-2">Basic Fee</td>
@@ -130,7 +239,9 @@ const HomeVisit = () => {
                     <p className="tracking-wider"><span className="font-bold text-2xl mr-1">*</span>Apabila klien melakukan pembatalan biaya ketika drh sudah berada di jalan, maka klien tetap harus membayar biaya pembatalan sebesar 50% dari estimasi harga awal.</p>
                 </div>
             </div>
-            <Payment />
+            <div className="my-10">
+                <Payment />
+            </div>
 
             <Request bg={"../../img/bg2.png"} />
             <Footer logo="../../img/logo.png" bg={`url("../../img/bg.png")`} />

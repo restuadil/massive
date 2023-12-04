@@ -9,7 +9,7 @@ const CardDoctor = ({ doctor }) => {
             {doctor.map((item) => {
                 return (
                     <div className="bg-[#FF6C22] flex flex-row gap-5 items-center justify-center p-7 rounded-lg mx-32" key={nanoid()}>
-                        <img src={item.img} alt="" className="rounded-full" />
+                        <img src={`../../../../public/${item.img}`} alt="" className="rounded-full" />
                         <div className="flex flex-col ">
                             <div>
                                 <h1 className="font-bold font-poppins text-2xl">{item.name}</h1>

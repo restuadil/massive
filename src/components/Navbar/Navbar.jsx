@@ -7,26 +7,66 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ logo = "img/logo.png" }) => {
     const location = useLocation();
-    const [activeUrl, setActiveUrl] = useState(location.pathname);
+    const [dropdown, setDropdown] = useState(null); // State untuk menangani dropdown
 
     const navigation = [
         {
             url: "/aboutus",
-            title: "Tentang Kami"
+            title: "Tentang Kami",
+            link: [
+                {
+                    url: "/aboutus",
+                    title: "Why Pet Care"
+                },
+                {
+                    url: "/aboutus/gallery",
+                    title: "Gallery"
+                }
+            ]
         },
         {
             url: "/services",
-            title: "Pelayanan Kami"
+            title: "Pelayanan Kami",
+            link: [
+                {
+                    url: "/services",
+                    title: "Services"
+                },
+                {
+                    url: "/services/vaccineform",
+                    title: "Vaksinasi"
+                },
+                {
+                    url: "/services/consultation",
+                    title: "Konsultasi"
+                },
+                {
+                    url: "/services/homevisit",
+                    title: "Home Visit"
+                }
+            ]
         },
         {
             url: "/pet",
-            title: "Peliharaan"
+            title: "Peliharaan",
+            link: [
+                { url: "/pet/cat", title: "Kucing" },
+                { url: "/pet/dog", title: "Anjing" }
+            ]
         }
     ];
 
     const handleClick = (url) => {
-        setActiveUrl(url);
+        if (dropdown === url) {
+            // Jika dropdown yang sedang aktif di-klik lagi, tutup dropdown
+            setDropdown(null);
+        } else {
+            // Jika dropdown belum aktif, buka dropdown
+            setDropdown(url);
+        }
     };
+
+
 
     return (
         <>
@@ -38,15 +78,28 @@ const Navbar = ({ logo = "img/logo.png" }) => {
                     <div>
                         <ul className="hidden md:flex font-medium font-poppins items-center gap-10 text-lg cursor-pointer">
                             {navigation.map((item) => (
-                                <Link
-                                    to={item.url}
-                                    key={nanoid()}
-                                    onClick={() => handleClick(item.url)}
-                                >
-                                    <li style={{ color: activeUrl === item.url ? 'red' : 'black' }}>
+                                <li key={nanoid()} className="relative">
+                                    <div
+                                        onClick={() => handleClick(item.url)}
+                                        style={{ color: location.pathname.includes(item.url) && item.url ? 'red' : 'black' }}
+                                    >
                                         {item.title}
-                                    </li>
-                                </Link>
+                                    </div>
+                                    {item.link && item.link.length > 0 && dropdown === item.url && (
+                                        <ul className="ml-4 absolute -left-5 bg-white shadow-lg flex-col w-40 min-h-max py-3 text-left pl-3 rounded-md">
+                                            {item.link.map((subItem) => (
+                                                <li key={nanoid()}>
+                                                    <Link
+                                                        className="text-black hover:text-red"
+                                                        to={subItem.url}
+                                                    >
+                                                        {subItem.title}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </li>
                             ))}
                         </ul>
                         <div className="text-black text-3xl md:hidden">
