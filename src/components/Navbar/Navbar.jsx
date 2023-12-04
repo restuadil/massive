@@ -67,7 +67,6 @@ const Navbar = ({ logo = "img/logo.png" }) => {
     };
 
 
-
     return (
         <>
             <div className="w-full fixed top-0 z-50 bg-white">
@@ -90,7 +89,7 @@ const Navbar = ({ logo = "img/logo.png" }) => {
                                             {item.link.map((subItem) => (
                                                 <li key={nanoid()}>
                                                     <Link
-                                                        className="text-black hover:text-red"
+                                                        className={`text-black hover:text-red ${location.pathname.includes(subItem.url) && subItem.url ? 'text-red' : ''}`}
                                                         to={subItem.url}
                                                     >
                                                         {subItem.title}

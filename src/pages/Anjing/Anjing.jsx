@@ -12,10 +12,10 @@ const Anjing = () => {
 
             <div className="my-10 flex flex-row justify-between items-center mx-32 gap-5">
                 <h1 className="font-chewy text-5xl text-left text-[#FF6C22]">Hal - hal yang perlu diketahui jika berkeinginan memelihara anjing</h1>
-                <img src="../../../public/img/homevisit.png" alt="" className="w-[500px]" />
+                <img src="../../../img/homevisit.png" alt="" className="w-[500px]" />
             </div>
             <div className="my-10 flex flex-row justify-between items-center mx-32 gap-5">
-                <img src="../../../public/img/homevisit.png" alt="" className="w-[500px]" />
+                <img src="../../../img/homevisit.png" alt="" className="w-[500px]" />
                 <div>
                     <h1 className="font-poppins font-extrabold text-2xl">Bagaimana cara merawat anjing dengan baik dan benar?</h1>
                     <p className="font-montserrat my-3">Anjing dikenal sebagai hewan yang setia.

@@ -6,7 +6,15 @@ import Request from "../../components/Request/Request"
 
 const Kucing = () => {
 
-    const cardCat = ["Hal yang perlu disiapkan untuk memelihara Kucing", "Mengenal jenis kucing yang populer di indonesia", "pertimbangan untuk mengadopsi anak kucing", "cara merawat kucing", "bagaimana memahami perilaku anak kucing", "hal yang  diperhatikan pada kesehatan kucing"]
+    const Cat = [
+        { to: "persiapan", title: "Hal yang perlu disiapkan untuk memelihara Kucing" },
+        { to: "jenis", title: "Mengenal jenis kucing yang populer di Indonesia" },
+        { to: "pertimbangan", title: "Pertimbangan untuk mengadopsi anak kucing" },
+        { to: "perawatan", title: "Cara merawat kucing" },
+        { to: "pemahaman", title: "Bagaimana memahami perilaku anak kucing" },
+        { to: "kesehatan", title: "Hal yang perlu diperhatikan pada kesehatan kucing" },
+    ];
+
     return (
         <>
             <Navbar logo="../../img/logo.png" />
@@ -24,12 +32,11 @@ const Kucing = () => {
             </div>
             <div className="flex flex-row flex-wrap justify-center items-center mx-20 gap-5 my-5">
                 {
-                    cardCat.map((card) => {
+                    Cat.map((card) => {
                         return (
                             <CardPet card={card} key={nanoid()} />
                         )
                     })
-
                 }
             </div>
 
