@@ -10,7 +10,7 @@ const Payment = () => {
                     {payment.map((payment) => (
                         <img
                             key={nanoid()}
-                            src={`../../../public/img/${payment}.png`}
+                            src={`../../../img/${payment}.png`}
                             alt={payment}
                             className="mx-auto"
                         />

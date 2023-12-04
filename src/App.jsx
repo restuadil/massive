@@ -11,6 +11,9 @@ import Kucing from './pages/Kucing/Kucing';
 import Anjing from './pages/Anjing/Anjing';
 import Persiapan from './pages/Kucing/Persiapan/Persiapan';
 import Jenis from './pages/Kucing/Jenis/Jenis';
+import Pertimbangan from './pages/Kucing/Pertimbangan/Pertimbangan';
+import Perawatan from './pages/Kucing/Perawatan/Perawatam';
+import Pemahaman from './pages/Kucing/Pemahaman/Pemahaman';
 
 
 export default function App() {
@@ -27,6 +30,9 @@ export default function App() {
             <Route path="pet/cat" element={<Kucing />} />
             <Route path="pet/cat/persiapan" element={<Persiapan />} />
             <Route path="pet/cat/jenis" element={<Jenis />} />
+            <Route path="pet/cat/pertimbangan" element={<Pertimbangan />} />
+            <Route path="pet/cat/perawatan" element={<Perawatan />} />
+            <Route path="pet/cat/pemahaman" element={<Pemahaman />} />
             <Route path="pet/dog" element={<Anjing />} />
         </Routes>
     )
