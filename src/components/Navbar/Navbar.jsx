@@ -19,8 +19,8 @@ const Navbar = ({ logo = "img/logo.png" }) => {
                     title: "Why Pet Care"
                 },
                 {
-                    url: "/aboutus/gallery",
-                    title: "Gallery"
+                    url: "/fandq",
+                    title: "F and Q"
                 }
             ]
         },

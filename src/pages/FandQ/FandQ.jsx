@@ -21,49 +21,44 @@ const FandQ = () => {
                 <h2 className="text-white text-4xl font-medium font-chewy mt-20 md:mt-0 md:text-4xl md:tracking-widest">Pertanyaan Yang Sering Di Tanyakan</h2>
                 <p className="text-white font-poppins font-light text-xs tracking-wide md:mb-4">Anda Punya Pertanyaan, Kami Punya Jawaban</p>
             </Hero>
-            <div className="my-3">
-                <h1 className="font-poppins font-bold text-2xl text-center">Daftar <span className="text-red">Pertanyaan</span></h1>
-                <div className="mt-3">
-                    <ul className="flex flex-row justify-around items-center font-chewy">
-                        <li className="text-red">Info </li>
-                        <li>Vaksin</li>
-                        <li>Konsultasi</li>
-                        <li>Diskusi</li>
-                        <li>Jadwal</li>
-                    </ul>
-                </div>
-                <div className="mx-3 mt-5">
-                    <h2 className="font-chewy text-xl text-red">Info Perusahaan</h2>
-                    <div className="border-y-4 border-gray-500">
-                        <div className="w-5/6 mx-auto flex flex-col mt-3 justify-center text-center my-3">
-                            <h1 className="text-3xl font-bold mt-5 text-white mb-5">Tanya Jawab Umum</h1>
-                            {dataQuestions.map((question) => (
-                                <ul key={nanoid()} onClick={() => toggleAnswer(question.id)}>
-                                    <div className="my-1">
-                                        <li className={`mx-5 flex flex-row justify-between items-center border-y-2 border-slate-300 ${openAnswerId === question.id ? "border-b border-white" : null}`}>
-                                            <h2 className="text-left py-3">{question.question}</h2>
-                                            <div>
-                                                <FaPlus
-                                                    className={`transform ${openAnswerId === question.id ? "rotate-45" : ""}  w-6 h-6 transition-transform`}
-                                                />
-                                            </div>
-                                        </li>
-                                        {openAnswerId === question.id && (
-                                            <div className="text-xs font-montserrat text-justify  mx-5 py-2">
-                                                <p>{question.answer}</p>
-                                            </div>
-                                        )}
-                                    </div>
-                                </ul>
-                            ))}
-                        </div>
+            <div className="my-3 mx-32">
+                <h1 className="font-poppins font-bold text-2xl text-center mt-10">Daftar <span className="text-red">Pertanyaan</span></h1>
+                <div className="flex flex-row gap-28">
+                    <div className="flex flex-col gap-3 mt-10">
+                        <h1 className="font-poppins text-2xl text-left text-red">Info Perusahaan</h1>
+                        <h1 className="font-poppins text-2xl text-left">Layanan Vaksinasi</h1>
+                        <h1 className="font-poppins text-2xl text-left">Konsultasi Dokter</h1>
+                        <h1 className="font-poppins text-2xl text-left">Forum Pertanyaan</h1>
+                    </div>
+                    <div className="w-2/3">
+                        <h1 className="text-2xl text-red font-poppins font-bold mb-10 mt-10">Info Perushaan</h1>
+                        {dataQuestions.map((question) => (
+                            <ul key={nanoid()} onClick={() => toggleAnswer(question.id)} className="">
+                                <div className="my-1 ">
+                                    <li className={`mx-5 flex flex-row justify-between items-center border-y-2 border-slate-300 ${openAnswerId === question.id ? "border-b border-white" : null}`}>
+                                        <h2 className="text-left py-5 pr-5 w-full">{question.question}</h2>
+                                        <div>
+                                            <FaPlus
+                                                className={`transform ${openAnswerId === question.id ? "rotate-45" : ""}  w-6 h-6 transition-transform`}
+                                            />
+                                        </div>
+                                    </li>
+                                    {openAnswerId === question.id && (
+                                        <div className=" font-montserrat text-justify  mx-5 py-2">
+                                            <p>{question.answer}</p>
+                                        </div>
+                                    )}
+                                </div>
+                            </ul>
+                        ))}
                     </div>
                 </div>
 
-                <div className="bg-center bg-cover bg-no-repeat" style={{ backgroundImage: `url("img/bg.png")` }}>
+
+                <div className="bg-center bg-cover bg-no-repeat mt-10" style={{ backgroundImage: `url("img/bg.png")` }}>
                     <div className="mx-5 py-5">
                         <h1 className="text-red font-chewy font-bold text-3xl text-center">Ada Pertanyaan Lainya?</h1>
-                        <form action="">
+                        <form >
                             <div className="flex flex-col mt-3">
                                 <label htmlFor="name" className="font-montserrat font-bold">Nama Kamu : <span className="text-red text-2xl">*</span>
                                 </label>
@@ -89,13 +84,18 @@ const FandQ = () => {
                                 </label>
                                 <input type="text" name="name" id="" className=" shadow-slate-500 shadow-md py-3 rounded-md" />
                             </div>
-                            <button className="mt-8 block mx-auto font-chewy font-bold text-3xl text-center rounded-3xl border-2 border-black py-2 px-8">
-                                Submit Pertanyaan
-                            </button>
                         </form>
+                        <button className="mt-8 block mx-auto font-chewy font-bold text-3xl text-center rounded-3xl border-2 border-black py-2 px-8"
+                            onClick={() =>
+                                alert("Pertanyaan Terkirim")
+
+                            }
+                        >
+                            Submit Pertanyaan
+                        </button>
                     </div>
                 </div>
-            </div>
+            </div >
             <Footer />
         </>
     )
