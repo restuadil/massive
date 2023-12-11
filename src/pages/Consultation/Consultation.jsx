@@ -58,9 +58,10 @@ const Consultation = () => {
         </div>
       </div>
       <div className="flex flex-col mx-10 gap-3 my-10">
-        {currentDoctors.map((doctor) => (
-          <CardDoctor doctor={doctor} key={nanoid()} />
-        ))}
+        {currentDoctors &&
+          currentDoctors.map((doctor) => (
+            <CardDoctor doctor={doctor} key={nanoid()} />
+          ))}
       </div>
       {/* Pagination component */}
       <div className="flex justify-center gap-3 my-5">
