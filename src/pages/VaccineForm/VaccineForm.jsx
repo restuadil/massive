@@ -6,7 +6,7 @@ import BtnHero from "../../components/UI/BtnHero";
 const VaccineForm = () => {
   return (
     <>
-      <Navbar />
+      <Navbar logo="../../img/logo.png" />
       <div className="my-5 text-white mx-32">
         <h1 className="text-center font-bold text-3xl my-3 text-black">
           Form Vaksinasi Hewan
@@ -188,8 +188,8 @@ const VaccineForm = () => {
           </div>
         </div>
       </div>
-      <Request bg={"/img/bg2.png"} />
-      <Footer />
+      <Request bg={"../../img/bg2.png"} />
+      <Footer logo="../../img/logo.png" bg={`url("../../img/bg.png")`} />
     </>
   );
 };
